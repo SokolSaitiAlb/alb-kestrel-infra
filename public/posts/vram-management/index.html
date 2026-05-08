@@ -193,18 +193,18 @@ The Crash Because the model consumed nearly the entire 16GB of VRAM, the Linux k
 
   <div class="post-content"><div>
         <h3 id="the-incident">The Incident<a href="#the-incident" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>While testing the limits of my <strong>RX 6800 16GB</strong> on CachyOS, I attempted to load the <code>Qwen2.5-Coder-32B</code> model using <code>llama-server</code>.</p>
+<p>While testing the limits of my RX 6800 16GB on CachyOS, I attempted to load the Qwen2.5-Coder-32B model using llama-server.</p>
 <h3 id="the-data">The Data<a href="#the-data" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>As shown in my terminal logs, the <strong>ROCm0 model buffer size</strong> requested was <strong>16123.35 MiB</strong>. With only <strong>319.04 MiB</strong> mapped to the CPU, the GPU was being pushed to its absolute physical limit.</p>
+<p>As shown in my terminal logs, the ROCm0 model buffer size requested was 16123.35 MiB. With only 319.04 MiB mapped to the CPU, the GPU was being pushed to its absolute physical limit.</p>
 <h3 id="the-crash">The Crash<a href="#the-crash" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>Because the model consumed nearly the entire 16GB of VRAM, the Linux kernel faced a critical memory shortage. To prevent a total system lockup, the <strong>Out-Of-Memory (OOM) Killer</strong> intervened:</p>
+<p>Because the model consumed nearly the entire 16GB of VRAM, the Linux kernel faced a critical memory shortage. To prevent a total system lockup, the Out-Of-Memory (OOM) Killer intervened:</p>
 <ul>
-<li><strong>Google Chrome</strong> was terminated.</li>
-<li><strong>plasmashell.service</strong> was terminated, effectively crashing my desktop environment.</li>
-<li>The <code>llama-server</code> process was ultimately terminated by signal <strong>SIGKILL</strong> (Forced quit).</li>
+<li>Google Chrome was terminated.</li>
+<li><code>plasmashell.service</code> was terminated, effectively crashing my desktop environment.</li>
+<li>The <code>llama-server</code> process was ultimately terminated by signal <strong>SIGKILL</strong>.</li>
 </ul>
 <h3 id="the-pivot">The Pivot<a href="#the-pivot" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>Stability is a prerequisite for a DevOps workflow. I have since pivoted to the <strong>Qwen2.5-Coder-14B-Instruct.Q6_K.GGUF</strong> model. This provides a high-performance coding assistant that fits comfortably within the RX 6800’s VRAM, leaving enough overhead for the OS and development tools.</p>
+<p>Stability is a prerequisite for a DevOps workflow. I have since pivoted to the <strong>Qwen2.5-Coder-14B-Instruct.Q6_K.GGUF</strong> model. This provides a high-performance coding assistant that fits comfortably within the RX 6800’s VRAM.</p>
 
       </div></div>
 

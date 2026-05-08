@@ -190,11 +190,11 @@
         <div class="post-content">
           
             <h3 id="the-incident">The Incident</h3>
-<p>While testing the limits of my <strong>RX 6800 16GB</strong> on CachyOS, I attempted to load the <code>Qwen2.5-Coder-32B</code> model using <code>llama-server</code>.</p>
+<p>While testing the limits of my RX 6800 16GB on CachyOS, I attempted to load the Qwen2.5-Coder-32B model using llama-server.</p>
 <h3 id="the-data">The Data</h3>
-<p>As shown in my terminal logs, the <strong>ROCm0 model buffer size</strong> requested was <strong>16123.35 MiB</strong>. With only <strong>319.04 MiB</strong> mapped to the CPU, the GPU was being pushed to its absolute physical limit.</p>
+<p>As shown in my terminal logs, the ROCm0 model buffer size requested was 16123.35 MiB. With only 319.04 MiB mapped to the CPU, the GPU was being pushed to its absolute physical limit.</p>
 <h3 id="the-crash">The Crash</h3>
-<p>Because the model consumed nearly the entire 16GB of VRAM, the Linux kernel faced a critical memory shortage. To prevent a total system lockup, the <strong>Out-Of-Memory (OOM) Killer</strong> intervened:</p>
+<p>Because the model consumed nearly the entire 16GB of VRAM, the Linux kernel faced a critical memory shortage. To prevent a total system lockup, the Out-Of-Memory (OOM) Killer intervened:</p>
           
         </div>
 
