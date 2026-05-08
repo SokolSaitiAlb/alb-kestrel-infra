@@ -1,4 +1,4 @@
-baseURL = "https://alb-kestrel-infra.pages.dev/"
+baseURL = baseURL = "https://alb-kestrel.pages.dev/"
 languageCode = "en-us"
 title = "Alb Kestrel"
 theme = "terminal"
