@@ -1,0 +1,37 @@
+baseURL = "https://alb-kestrel.pages.dev"
+languageCode = "en-us"
+title = "Alb Kestrel"
+theme = "terminal"
+
+[params]
+  # Theme appearance matching your assets
+  contentTypeName = "posts"
+  themeColor = "red"
+  showThemeSwitcher = false
+
+  # BRANDING INJECTION
+  # This pulls your custom.css from assets/css/custom.css
+  customCSS = ["css/custom.css"]
+
+  # Brand Identity
+  logoText = "alb@albgamingpc:~$"
+  logoHomeLink = "/"
+  avatar = "favicon.png"
+
+[params.twitter]
+  site = "AlbKestrel"
+
+[[menu.main]]
+  name = "The Forge"
+  url = "/forge"
+  weight = 1
+
+[[menu.main]]
+  name = "The Bench"
+  url = "/bench"
+  weight = 2
+
+[[menu.main]]
+  name = "The Docs"
+  url = "/posts"
+  weight = 3
