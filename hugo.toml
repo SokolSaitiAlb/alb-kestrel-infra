@@ -1,22 +1,22 @@
-baseURL = "https://alb-kestrel.pages.dev"
+baseURL = "https://alb-kestrel-infra.pages.dev/"
 languageCode = "en-us"
 title = "Alb Kestrel"
 theme = "terminal"
 
 [params]
-  # Theme appearance matching your assets
-  contentTypeName = "posts"
+  # The theme uses these for the main accent color
   themeColor = "red"
+  contentTypeName = "posts"
   showThemeSwitcher = false
 
-  # BRANDING INJECTION
-  # This pulls your custom.css from assets/css/custom.css
-  customCSS = ["css/custom.css"]
-
-  # Brand Identity
+  # Branding & Identity
   logoText = "alb@albgamingpc:~$"
   logoHomeLink = "/"
+  # Ensure favicon.png is in your /static folder
   avatar = "favicon.png"
+
+  # This pulls your custom styling from assets/css/custom.css
+  customCSS = ["css/custom.css"]
 
 [params.twitter]
   site = "AlbKestrel"
