@@ -1,8 +1,11 @@
 ---
 title: "Privacy Policy"
-date: 2026-06-10
+date: 2026-06-01
+url: "/privacy/"
+layout: "page"
 draft: false
 ---
+
 
 # Privacy Policy for Takvimi Kosovë
 
